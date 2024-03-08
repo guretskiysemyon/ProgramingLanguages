@@ -61,13 +61,7 @@ let rec reduce_cbv = fun t -> match t with
     let red_t1 = reduce_cbv t1 in
     (match red_t1 with 
     | Some e -> Some (Application(e, t2))
-    | None ->
-        let red_t2 = reduce_cbv t2 in
-        (match red_t2 with
-        | Some e -> Some (Application(t1, e))
-        | None -> None
-        )
-    )
+    | None -> None
 | Application(Abstraction(id, t1), t2) when (is_variable t2) -> Some(substitute id t2 t1)
 | Application (t1, t2) when not (is_abstraction t2) ->
         let red_t2 = reduce_cbv t2 in
@@ -89,6 +83,5 @@ let rec reduce_cbn = fun t -> match t with
             | Some (e) -> Some(Application(e, t2))
             | None -> None
   )
-| Application(Abstraction(id, t1), t2) when (is_variable t2) -> Some(substitute id t2 t1)
 | Application (Abstraction(id1, t1),t2) -> Some(substitute id1 t2 t1)
 | _ -> None
