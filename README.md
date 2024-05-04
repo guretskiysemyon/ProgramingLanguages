@@ -1,4 +1,4 @@
-This exercises were part of the Programming Language Course. We left the most interesting ones, in our opinion.
+This exercises were part of the Programming Language Course. We left the most interesting ones, in our opinion. 
 
 - The While Language is the simple programming language used in the course to better understand some basic principles of programming languages. Project includes a simple implementation of its abstract syntax tree and semantics.
 
@@ -7,5 +7,7 @@ This exercises were part of the Programming Language Course. We left the most in
 All code was written in OCaml language.
 
 Each of the projects has its own readme file with a more concrete explanation.
+
+Implemented by myself and [Yoav Shragay](https://github.com/yoavShragay)
 
 Enjoy!
