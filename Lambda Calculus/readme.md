@@ -1,3 +1,10 @@
+
+In this exercise we implemented evaluation of pure lambda calculus expressions by Call-By-Value and Call-By-Name reduction.
+
+
+
+# How to Run
+
 The solution should compile with OCaml 4.02, and does not require Core.
 
 Your files should compile with:
@@ -16,3 +23,6 @@ utop # open Parser;;
 utop # open Reducer;;
 utop # open Tests;;
 utop # evaluate ~verbose:true reduce_normal (parse "((\\x. x) y)");;
+
+
+
